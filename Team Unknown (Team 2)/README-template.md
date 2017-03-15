@@ -1,4 +1,7 @@
-# Readme for Team
+# Readme for Team Big Wings
+![Team Picture](../IMG_8228.jpg)
 
-Modify this document to include your team photo and add a caption identifying the team members in your photo, (e.g., from left: Carl Howe, Phil Connors, etc.)
+
+
+ (from left: Moisés, John, Santi, Marat, Phil)
 
