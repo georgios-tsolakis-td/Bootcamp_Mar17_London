@@ -1,4 +1,4 @@
-# Readme for Team
+# Readme for Team Green
 
 ![Team Green](IMG_8248.jpg)
 
