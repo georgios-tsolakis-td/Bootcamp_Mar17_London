@@ -1,6 +1,6 @@
-# Readme for Team
+# Readme for Team Green
 
-[!Team Green](IMG_8248)
+![Team Green](IMG_8248.jpg)
 
 From the left:
 
