@@ -4,4 +4,4 @@ Modify this document to include your team photo and add a caption identifying th
 
 ![Team Quinto](../IMG_8238.jpg) 
 
-(Magda, Vincent, Felix, Stuart, Martin)
+(Amgad, Vincent, Felix, Stuart, Martin)
