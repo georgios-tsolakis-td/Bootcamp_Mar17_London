@@ -5,6 +5,20 @@
 ### FAA flight data
    http://registry.faa.gov/database/ReleasableAircraft.zip 
 ### flightaware.com
+ADS-B flight data feed
+
+For access to the API: https://uk.flightaware.com/commercial/flightxml/key
+
+#### Example
+```
+epoch_time,mode_s_code,flight_level,latitude,longitude,groundspeed,heading,air_ground_flag,ident,registration,flight_id
+1404940425,73806E,350,51.191913,7.420654,453,134,A,ELY336,,ELY336-1404711592-airline-0128:0
+1404940425,73806E,350,51.191913,7.420654,453,134,A,ELY336,,ELY336-1404711592-airline-0128
+1404940425,3C49A6,173,51.017203,7.603073,362,44,A,BER7727,,BER7727-1404711272-airline-0176:0
+1404940425,AB64B8,236,26.65114,-80.58466,412,356,A,AAL1599,,AAL1599-1404711241-airline-0388
+```
+
+### airframes.org
    automatic harvesting explicitly forbidden
 ### Airline On-Time Performance Data
 https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time
