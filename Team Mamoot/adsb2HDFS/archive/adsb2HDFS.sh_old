@@ -15,8 +15,8 @@ function init() {
     DAYS_FROM_YESTERDAY=7
     ADSBEXCHANGE_FOLDER=/vagrant/adsbexchange
     SKIP_DOWNLOAD_UNZIP=0
-    ADSBEXCHANGE_TEMP_FOLDER=/data/tmp/adsbexchange
-    HDFS_FOLDER=/data/flightdata/adsbexchange
+    ADSBEXCHANGE_TEMP_FOLDER=/tmp/adsbexchange
+    HDFS_FOLDER=/vagrant/adsbexchange
     mkdir -p $ADSBEXCHANGE_TEMP_FOLDER
 }
 
