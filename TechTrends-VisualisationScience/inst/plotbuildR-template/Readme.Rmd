@@ -1,0 +1,16 @@
+---
+title: "plotbuildR Demo"
+author: "Niket Doshi"
+date: "22/03/2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("global.R")
+```
+
+```{r}
+callModule(generatePlot, id = "plot1", df_list = df_list_test, df = data1, x= "Petal.Length", y = "Sepal.Length", color = "Species", plot_type = "Scatter Plot")
+```

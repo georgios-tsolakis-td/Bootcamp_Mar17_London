@@ -1,0 +1,108 @@
+---
+title: 'Tech Trends: Visualisation Science'
+author: "Niket Doshi"
+date: "21/03/2017"
+output: 
+  ioslides_presentation: 
+    highlight: tango
+    widescreen: yes
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+## Audience Survey
+
+Before starting the presentation, I would like you to participate in a short interactive survey. This will help me to know you better and to structure the presentation accordingly.
+
+[https://pollev.com/niketdoshi426](https://pollev.com/NIKETDOSHI426)
+
+## Introduction
+
+- **Senior Data Scientist, Paris**
+
+- **Strengths**: Neural Networks, Visualisation, Story Telling
+
+- **Preferred Language for Data Science**: R
+
+- **Favorite Viz Tool**: R Shiny
+
+- **Preferred Viz Packages**: *plotbuildR*, *plotly*, *networkD3*, *dygraph*, *leaflet*
+
+## Visualisation Science
+<div align = "center"><div class = "blue"><b><em>
+The commonality between science and art is in trying to see profoundly - to develop strategies of seeing and showing
+</em></b></div></div>
+
+<div align = "right"><em>-- Edward Tufte</em></div>
+<div class = "centered">
+[1854 Broad Street cholera outbreak](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak)
+</div>
+<div class = "centered">
+<a title="By John Snow [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ASnow-cholera-map-1.jpg"><img width="512" alt="Snow-cholera-map-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/512px-Snow-cholera-map-1.jpg"/></a>
+</div>
+
+## A Trivial Example      
+```{r}
+fluidRow(
+  column(width = 6,
+         renderDataTable(select(iris, Species, Petal.Length, Sepal.Length, everything()),options = list(pageLength = 5))
+  ),
+  column(width = 6,
+         renderPlotly({
+           plot_ly(iris, x= ~Sepal.Length, y=~Petal.Length, color = ~Species, colors = "Set1", size = ~Petal.Width, type = "scatter", mode = "markers",
+                   text = ~paste('Petal Width(size):', Petal.Width)) %>% 
+             layout(title = "Petal Length vs Sepal Length vs Petal Width", xaxis = list(title = "Sepal Length"), yaxis = list(title = "Petal Length"))
+         })
+  )
+)
+```
+
+## Our Capabilities
+
+- In most of our projects we end up delivering a [Shiny App](https://shiny.rstudio.com) to our clients
+
+- [Aster](http://www.teradata.co.uk/products-and-services/analytics-from-aster-overview/?LangType=2057&LangSelect=true) has very impressive `npath` functions
+
+- [Kylo](https://kylo.io) provides visualisation support to discover metadata and monitor feeds
+
+- For Enedis we created a Tableau dashboard to get initial insights of all the datasets loaded in Aster
+
+- We are building a new package to help R Shiny users to build amazing visualisations on the fly - `plotbuildR`
+
+
+## Viz Trends: [APACHE LIVY](http://livy.io/index.html)
+
+- An Open Source REST Service for Apache Spark
+
+- A service that manages long running Spark Contexts in your cluster
+
+- Helps to reduce friction to use Spark
+
+- Submitting a job, getting back results, getting spark context
+
+- Client API in java, scala, python and now, also in R
+
+## Powerful Deliverables
+
+- [Trains Demo](http://ec2-52-208-145-120.eu-west-1.compute.amazonaws.com/shiny/trains)
+
+- [Vodafone: Campaign Evaluation App ]()
+
+## Interactive Visualisation Made Easy
+
+- To make powerful visualisations easy for R users, we have developed a new package called *plotbuildR*
+
+- You'll be able to try and test different plots within your Shiny App on the fly
+
+- Possiblity to plot 14 different interactive graphs
+
+<div class ="centered">
+<div class ="blue">
+**Let's do a short demo**
+</div>
+</div>
+                  
