@@ -65,6 +65,6 @@ create table if not exists parquet_trimmed(
     firstdeptime int,
     totaladdgtime int,
     longestaddgtime int
-) stored as parquet location '/vagrant/flightdata/parquet-trimmed';
+) stored as parquet location '/data/flightdata/parquet-trimmed';
 
-select * from parquet_trimmed;
+

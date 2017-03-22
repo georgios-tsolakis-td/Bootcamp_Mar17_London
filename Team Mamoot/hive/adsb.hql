@@ -13,7 +13,7 @@ WITH SERDEPROPERTIES (
     "id"="$.acList.Id",
     "transponder_type"="$.acList.Trt"
 )
-LOCATION '/vagrant/adsbexchange';
+LOCATION '/data/flightdata/adsbexchange';
 
 #Transponder type - 0=Unknown, 1=Mode-S, 2=ADS-B (unknown version), 3=ADS-B 1, 4=ADS-B 2.
 select id
