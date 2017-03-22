@@ -32,7 +32,7 @@ InputDays <- function(month,day){
 }
 
 
-datesOfYear <- unique(fl[,c("Month","DayOfMonth")])
+datesOfYear <- unique(fl[,c("Month","DayofMonth")])
 datesOfYear$HDAYS <- mapply(DaysToHoliday, datesOfYear$Month, datesOfYear$DayofMonth) 
 
 fl$DaysToHoliday <- mapply(InputDays, fl$Month, fl$DayofMonth)
