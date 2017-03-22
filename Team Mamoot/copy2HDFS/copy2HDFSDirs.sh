@@ -15,7 +15,7 @@ echo -e  "Nothing to do. Not enough input arguments.
 else
 
 SOURCE_DIR="$1"
-OUTPUT_DIR=/flightdata
+OUTPUT_DIR=/data/flightdata
 
 echo "Creation of directories in HDFS"
 

@@ -1,10 +1,5 @@
-[vagrant@edge ~]$ hdfs dfs -mkdir /data/flightdata/aircraft-registrations/acftref
-[vagrant@edge ~]$ hdfs dfs -cp /data/flightdata/aircraft-registrations/ACFTREF.txt /data/flightdata/aircraft-registrations/acftref
+USE ${DB};
 
-
-/*
-	01. Create table acftref and loading the Data
-*/
 DROP TABLE IF EXISTS acftref;
 CREATE EXTERNAL TABLE acftref (
 CODE STRING,
@@ -22,15 +17,9 @@ SPEED STRING
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',' 
 STORED AS TEXTFILE
---LOCATION '/vagrant/data/flightdata/aircraft-registrations/acftref'
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/ACFTREF.txt' into table acftref;
 
-
-/*
-	02. Create table dealer and loading the Data
-*/
 
 DROP TABLE IF EXISTS dealer;
 CREATE EXTERNAL TABLE dealer (
@@ -78,11 +67,7 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/DEALER.txt' into table dealer;
 
-/*
-	03. Create table dereg and loading the Data
-*/
 DROP TABLE IF EXISTS dereg;
 CREATE EXTERNAL TABLE dereg (
 N_NUMBER STRING,
@@ -129,12 +114,8 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/DEREG.txt' into table dereg;
 
 
-/*
-	05. Create table docindex and loading the Data
-*/
 DROP TABLE IF EXISTS docindex;
 CREATE EXTERNAL TABLE docindex (
 TYPE_COLLATERAL INT,
@@ -151,12 +132,11 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',' 
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
-;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/DOCINDEX.txt' into table docindex;
 
-/*
-	06. Create table engine and loading the Data
-*/
+;
+
+
+
 DROP TABLE IF EXISTS engine;
 CREATE EXTERNAL TABLE engine (
 CODE STRING,
@@ -171,11 +151,7 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/ENGINE.txt' into table engine;
 
-/*
-	06. Create table master and loading the Data
-*/
 DROP TABLE IF EXISTS master;
 CREATE EXTERNAL TABLE master (
 N_NUMBER STRING,
@@ -218,11 +194,7 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/MASTER.txt' into table master;
 
-/*
-	07. Create table reserved and loading the Data
-*/
 DROP TABLE IF EXISTS reserved;
 CREATE EXTERNAL TABLE reserved (
 N_NUMBER STRING,
@@ -242,6 +214,21 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1") 
 ;
-load data local inpath '/vagrant/data/flightdata/aircraft-registrations/RESERVED.txt' into table reserved;
+
+
+load data inpath '/data/flightdata/aircraft-registrations/ACFTREF.txt' into table acftref;
+load data inpath '/data/flightdata/aircraft-registrations/DEALER.txt' into table dealer;
+load data inpath '/data/flightdata/aircraft-registrations/DEREG.txt' into table dereg;
+load data inpath '/data/flightdata/aircraft-registrations/DOCINDEX.txt' into table docindex;
+load data inpath '/data/flightdata/aircraft-registrations/ENGINE.txt' into table engine;
+load data inpath '/data/flightdata/aircraft-registrations/MASTER.txt' into table master;
+load data inpath '/data/flightdata/aircraft-registrations/RESERVED.txt' into table reserved;
+
+
+
+
+
+
+
 
 
