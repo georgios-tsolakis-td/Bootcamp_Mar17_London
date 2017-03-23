@@ -5,7 +5,7 @@ https://en.wikipedia.org/wiki/List_of_airlines_of_the_United_States
 
 http://www.airfleets.net/recherche/list-country-USA_0.htm
 
-
+http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
 
 ### flight delay data
    supplied parquet files
