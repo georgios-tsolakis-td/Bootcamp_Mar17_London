@@ -35,7 +35,7 @@ function get_files() {
         current_file=$(echo http://history.adsbexchange.com/Aircraftlist.json/$current_date.zip)
         echo "Downloading $current_file ..."
         ADSBEXCHANGE_CURRENT_FILE=$ADSBEXCHANGE_FOLDER/$current_date.zip
-        wget -N --force-directories -O $ADSBEXCHANGE_CURRENT_FILE $current_file
+        #wget -N --force-directories -O $ADSBEXCHANGE_CURRENT_FILE $current_file
     done
     for file in $(find $ADSBEXCHANGE_FOLDER -name "*.zip"); do
         unzip -o $file -d $ADSBEXCHANGE_TEMP_FOLDER;
