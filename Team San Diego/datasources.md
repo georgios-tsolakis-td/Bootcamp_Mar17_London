@@ -1,11 +1,17 @@
 # Data sources and location
 
-## Links
+## Bibliography
 https://en.wikipedia.org/wiki/List_of_airlines_of_the_United_States
 
 http://www.airfleets.net/recherche/list-country-USA_0.htm
 
 http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
+
+### National Transportation Statistics. It confirms that in the US there are about 6,6k carriers.
+https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_statistics/html/table_01_11.html.
+
+###About how many Aircrafts have already ADS-B transponder in the US 
+http://interactive.aviationtoday.com/avionicsmagazine/june-july-2016/equipping-100-000-aircraft/
 
 ### flight delay data
    supplied parquet files
