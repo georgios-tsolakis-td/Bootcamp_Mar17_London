@@ -1,0 +1,2 @@
+
+hdfs dfs copyFrommLocal -f /vagrant/adsbexchange/2017-03-14/* /data/flightdata/adsbexchange

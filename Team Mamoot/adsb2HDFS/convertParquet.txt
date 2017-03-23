@@ -1,0 +1,15 @@
+Steps:
+
+1. Copy json file for a single day
+hdfs dfs -copyFromLocal -f /vagrant/adsbexchange/2017-03-15/* /data/flightdata/adsbexchange
+
+2. Run scala to convert to parquet:
+val df = sqlContext.read.json("/data/flightdata/adsbexchange/*.json")
+df.write.parquet("/data/flightdata/adsbexchange/parquet/20170314")
+
+
+3. Purge json file for this day
+
+hdfs dfs -rm /data/flightdata/adsbexchange/.json
+
+4. When it is done for 7 days then parquet files can be used for further analysis
