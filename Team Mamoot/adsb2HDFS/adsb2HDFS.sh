@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function help_menu() {
-    echo ". adsb2HDFS.sh"
+    echo ". adsb2HDFS.sh [-d] [-s]"
     echo "Commands:"
     echo "  clear : Removes all files generated"
     echo "Arguments:"
@@ -18,6 +18,7 @@ function init() {
     ADSBEXCHANGE_TEMP_FOLDER=/data/tmp/adsbexchange
     HDFS_FOLDER=/data/flightdata/adsbexchange
     mkdir -p $ADSBEXCHANGE_TEMP_FOLDER
+    hdfs dfs -mkdir -p $HDFS_FOLDER
 }
 
 function finalise() {
@@ -33,11 +34,17 @@ function get_files() {
         current_date=$(date -I --date="$(echo $i days ago)")
         current_file=$(echo http://history.adsbexchange.com/Aircraftlist.json/$current_date.zip)
         echo "Downloading $current_file ..."
-        wget -N --force-directories -P $ADSBEXCHANGE_FOLDER $current_file
+        ADSBEXCHANGE_CURRENT_FILE=$ADSBEXCHANGE_FOLDER/$current_date.zip
+        wget -N --force-directories -O $ADSBEXCHANGE_CURRENT_FILE $current_file
     done
     for file in $(find $ADSBEXCHANGE_FOLDER -name "*.zip"); do
         unzip -o $file -d $ADSBEXCHANGE_TEMP_FOLDER;
     done
+}
+
+function ingest_files() {
+    echo "Moving data into hdfs"
+    spark-shell -i adsb2Parquet.scala
 }
 
 init
@@ -51,14 +58,14 @@ do
         ;;
         -h|--help)
             help_menu
-            exit 113
+            exit 0
         ;;
         -s|--skip)
             SKIP_DOWNLOAD_UNZIP=1
         ;;
         clear)
             finalise
-            exit 113
+            exit 0
         ;;
     esac
 
@@ -71,8 +78,8 @@ else
    echo "Skipping download and unzip"
 fi
 
-echo "Moving data into hdfs"
-hdfs dfs -mkdir -p $HDFS_FOLDER
+ingest_files
+
 hdfs dfs -copyFromLocal -f $ADSBEXCHANGE_TEMP_FOLDER/* $HDFS_FOLDER
 
 echo "----- Ingest finished ------"
