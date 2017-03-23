@@ -33,3 +33,57 @@ Further engagements
 
 Technical whitepaper describing the solution
 
+
+
+## Airlines by ADS-B needing aircraft type
+
+Hawaiian Airlines
+18 Boeing 717
+6 ATR 42
+
+Alaska Airlines
+15 ERJ-175
+
+Allegiant Air
+44 McDonnell Douglas MD-83 
+
+American Airlines have (http://active.boeing.com/commercial/orders/displaystandardreport.cfm?cboCurrentModel=707&optReportType=AllModels&cboAllModel=707&ViewReportF=View+Report)
+128 Boeing 707
+
+Pan Am have
+126 Boeing 707
+
+TWA have
+127 Boeing 707
+
+
+Delta Airline have
+91 Boeing 717
+65 McDonnell Douglas MD-90
+
+
+FedEx
+25 ATR 42
+20 ATR 72
+
+
+ExpressJet
+168 Embraer ERJ-145
+48 CRJ-200
+
+
+Skywest
+161 CRJ-200
+93  Embraer ERJ-170
+
+
+
+## Airlines 2014
+
+1 Delta Airlines     12.49 %
+2 United Airlines    10.09 %
+3 American Airlines   9.73 %
+4 FedEx               9.61 %
+5 Southwest Ai.       9.33 %
+6 ExpressJet          5.59 %
+7 SkyWest             5.12 %
