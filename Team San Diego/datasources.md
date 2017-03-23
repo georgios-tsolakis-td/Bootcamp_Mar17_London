@@ -5,7 +5,11 @@ https://en.wikipedia.org/wiki/List_of_airlines_of_the_United_States
 
 http://www.airfleets.net/recherche/list-country-USA_0.htm
 
+### ranking of us commercial airlines
 http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
+
+### Airlines ranked by passengers (not so relevant for the first use case)
+http://www.fi-aeroweb.com/Top-100-US-Airlines.html
 
 ### flight delay data
    supplied parquet files
