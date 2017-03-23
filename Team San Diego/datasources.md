@@ -1,6 +1,6 @@
 # Data sources and location
 
-## Links
+## Bibliography
 https://en.wikipedia.org/wiki/List_of_airlines_of_the_United_States
 
 http://www.airfleets.net/recherche/list-country-USA_0.htm
@@ -8,8 +8,16 @@ http://www.airfleets.net/recherche/list-country-USA_0.htm
 ### ranking of us commercial airlines
 http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
 
+
 ### Airlines ranked by passengers (not so relevant for the first use case)
 http://www.fi-aeroweb.com/Top-100-US-Airlines.html
+
+### National Transportation Statistics. It confirms that in the US there are about 6,6k carriers.
+https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_statistics/html/table_01_11.html.
+
+### How many Aircrafts already have an ADS-B transponder in the US 
+http://interactive.aviationtoday.com/avionicsmagazine/june-july-2016/equipping-100-000-aircraft/
+
 
 ### flight delay data
    supplied parquet files
@@ -20,7 +28,7 @@ ADS-B flight data feed
 
 For access to the API: https://uk.flightaware.com/commercial/flightxml/key
 
-#### Example
+#### Example - Flight Delay Data
 ```
 epoch_time,mode_s_code,flight_level,latitude,longitude,groundspeed,heading,air_ground_flag,ident,registration,flight_id
 1404940425,73806E,350,51.191913,7.420654,453,134,A,ELY336,,ELY336-1404711592-airline-0128:0
