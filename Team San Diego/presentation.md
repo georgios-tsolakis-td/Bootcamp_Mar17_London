@@ -33,6 +33,23 @@ Further engagements
 
 Technical whitepaper describing the solution
 
+## Aircrafts needing ADS-B
+
+Common aircraft models that usually do not have an ADS-B transponder and are not visible on Flightradar24 (within ADS-B coverage):
+
+Antonov An-124 and An-225 (Typically not operated by any commercial US airlines
+ATR 42, 72 (except most new deliveries of ATR 72-600)
+Boeing 707, 717, 727, 737-200, 747-100, 747-200, 747SP
+BAe Jetstream 31 and 32
+All Bombardier CRJ models (except most new deliveries of CRJ-900)
+All Bombardier Dash models
+All CASA models
+All Dornier models
+All Embraer models (except most new deliveries of Embraer E190)
+De Havilland Canada DHC-6 Twin Otter
+Fokker 50
+McDonnell Douglas DC-9, MD-8x, MD-90
+Saab 340 and 2000
 
 
 ## Airlines by ADS-B needing aircraft type
@@ -76,7 +93,9 @@ Skywest
 161 CRJ-200
 93  Embraer ERJ-170
 
-
+Republic Airways
+154 Embraer ERJ 170/175
+2 Embraer ERJ 145
 
 ## Airlines 2014
 
